@@ -1,10 +1,8 @@
 name: 'Release workflow'
 on:
   push:
-    branches:
-      - main
     tags:
-      - '*.*'
+      - '*'
 
 jobs:
   release:
@@ -28,6 +26,7 @@ jobs:
 
   post_release:
     name: 'Create a release on GitHub'
+    needs: release
 
     runs-on: ubuntu-latest
 
