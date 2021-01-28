@@ -53,6 +53,10 @@ jobs:
         with:
           version: ${{ steps.setup_release_version_number.outputs.VERSION }}
       - run: git add CHANGELOG.md && git commit -m "Update changelog - version ${{ steps.setup_release_version_number.outputs.VERSION }}"
+      - name: Set up deploy key
+        uses: webfactory/ssh-agent@v0.4.1
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
       - name: Deploy on GitHub Packages
         run: mvn -B release:prepare release:perform
         env:
