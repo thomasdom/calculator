@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.2] - 2021-01-28
+
 ## [2.1] - 2021-01-28
 
 ## [2.0] - 2021-01-28
@@ -35,7 +37,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Outputs "Hello, world!"
 -   Checkout my custom feature
 
-[Unreleased]: https://github.com/thomasdom/calculator/compare/2.1...HEAD
+[Unreleased]: https://github.com/thomasdom/calculator/compare/2.2...HEAD
+
+[2.2]: https://github.com/thomasdom/calculator/compare/2.1...2.2
 
 [2.1]: https://github.com/thomasdom/calculator/compare/2.0...2.1
 
