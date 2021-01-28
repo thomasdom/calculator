@@ -26,5 +26,5 @@ jobs:
       - run: mkdir staging && cp target/*.jar staging
       - uses: actions/upload-artifact@v2
         with:
-          name: Calculator-${{ github.head_ref }}.${{ github.sha }}
+          name: Calculator-${{ github.sha }}
           path: staging
