@@ -7,8 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-- Improved GitHub Actions workflow
-- Amazing feature
+## [2.0] - 2021-01-28
+
+-   Improved GitHub Actions workflow
+-   Amazing feature
 
 ## [1.7] - 2021-01-28
 
@@ -31,7 +33,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Outputs "Hello, world!"
 -   Checkout my custom feature
 
-[Unreleased]: https://github.com/thomasdom/calculator/compare/1.7...HEAD
+[Unreleased]: https://github.com/thomasdom/calculator/compare/2.0...HEAD
+
+[2.0]: https://github.com/thomasdom/calculator/compare/1.7...2.0
 
 [1.7]: https://github.com/thomasdom/calculator/compare/1.6...1.7
 
