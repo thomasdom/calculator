@@ -31,9 +31,6 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    env:
-      ACTIONS_ALLOW_UNSECURE_COMMANDS: true
-
     steps:
       - uses: actions/checkout@v2
       - name: Initialize mandatory git config
@@ -42,6 +39,10 @@ jobs:
           git config committer.email noreply@github.com
           git config author.name ${{ github.actor }}
           git config author.email ${{ github.actor }}@users.noreply.github.com
+      - name: Set up JDK 11
+        uses: actions/setup-java@v1
+        with:
+          java-version: 11
       - name: Set up release version number 
         id: setup_release_version_number
         run: |
@@ -51,10 +52,7 @@ jobs:
         uses: thomaseizinger/keep-a-changelog-new-release@v1
         with:
           version: ${{ steps.setup_release_version_number.outputs.VERSION }}
-      - name: Set up JDK 11
-        uses: actions/setup-java@v1
-        with:
-          java-version: 11
+      - run: git add CHANGELOG.md && git commit -m "Update changelog - version ${{ steps.setup_release_version_number.outputs.VERSION }}"
       - name: Deploy on GitHub Packages
         run: mvn -B release:prepare release:perform
         env:
