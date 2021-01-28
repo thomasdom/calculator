@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- Improved GitHub Actions workflow
+- Amazing feature
+
 ## [1.7] - 2021-01-28
 
 ## [1.6] - 2021-01-28

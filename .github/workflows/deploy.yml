@@ -7,8 +7,10 @@ on:
 jobs:
   build_and_test:
     name: 'Build and test'
-    
+
     runs-on: ubuntu-latest
+
+    if: ${{ !startsWith(github.event.head_commit.message, '[maven-release-plugin]') }}
 
     steps:
       - uses: actions/checkout@v2
@@ -30,6 +32,8 @@ jobs:
     needs: build_and_test
 
     runs-on: ubuntu-latest
+
+    if: ${{ !startsWith(github.event.head_commit.message, '[maven-release-plugin]') }}
 
     steps:
       - uses: actions/checkout@v2
