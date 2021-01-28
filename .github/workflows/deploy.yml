@@ -56,7 +56,7 @@ jobs:
       - name: Set up deploy key
         uses: webfactory/ssh-agent@v0.4.1
         with:
-          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+          ssh-private-key: ${{ secrets.DEPLOY_PRIVATE_KEY }}
       - name: Deploy on GitHub Packages
         run: mvn -B release:prepare release:perform
         env:
